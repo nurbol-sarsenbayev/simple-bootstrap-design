@@ -39,8 +39,8 @@
 ```
 <div id="page-wrapper">
   <header  class="section section-header section-inverse"></header>
-  <section class="section section-plusess"></section>
   <section class="section section-about"></section>
+  <section class="section section-plusses"></section>
   <section class="section section-screenshots"></section>
   <section class="section section-reviews"></section>
   <section class="section section-prices"></section>
@@ -51,23 +51,40 @@
 Будет один блок **page-wrapper** в котором будет все секции макета и header, footer. Классы секций будет начинаться так **section section-**, чтобы выделить от остальных классов. **section-inverse** означает, что это секция будеть иметь синий фон с белым текстом, когда обычная секция имеет белый фон и черный текст по макету. Все основные css коды пишем в **app/sass/main.scss**. 
 ```
 .section {
-	padding: 30px 0 50px 0;
-	background-color: #fff;
-	color: #333;
+  padding: 30px 0 50px 0;
+  background-color: #fff;
+  color: #333;
 
-	&-inverse {
-		background-color: #445162;
-		color: #fff;
-	}
+  &-inverse {
+    background-color: #445162;
+    color: #fff;
+  }
+}
+```
+В фотошопе в макете выбираем основные тексты и смотрям какие у них параметры в окне Character:
+![Текст в Фотошопе](!https://nurbol-sarsenbayev.github.io/images/simple-bootstrap-design/photoshop_character.JPG)
+На рисунке видно, что шрифт (font-family) Arial, размер шрифта (font-size) 16px, высота линии (line-height) 24px. Чтобы эти свойствы были заданы на все элементы, а не только к тексту, их пишем в body:
+```
+body {
+	min-width: 320px;
+	position: relative;
+	line-height: 24px;
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+	color: #fff;
+	overflow-x: hidden;
+	opacity: 1;
 }
 ```
 
-### Header
 
+### Header
+Шапка сайта будет выглядет так:
 ```
-<header class="page-header">
+<header class="section section-header section-inverse">
   <div class="container">
     <div class="row">
+      
       <div class="col-sm-7">
         <h1 class="h1">Product name</h1>
         <ul class="header-list">
@@ -77,13 +94,18 @@
           <li>Associate the page with the payment system</li>
         </ul>
       </div>
+      
       <div class="col-sm-5">
-        <div class="header-img back-white"></div>
+        <div class="img-header img img-white"></div>
       </div>
+    
     </div>
   </div>
 </header>
 ```
+А CSS:
+```
 
+```
 
 
