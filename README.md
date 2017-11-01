@@ -30,3 +30,30 @@
   <footer class="page-footer"></footer>
 </div>
 ```
+
+### Header
+Для сетки сайта используем адаптивную Bootstrap сетку 3 версии. Если не знакомы, рекомендуем прочитать систему сеток Bootstrap [здесь](http://bootstrap-3.ru/css.php#grid).
+
+```
+<header class="page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7">
+        <h1 class="h1">Product name</h1>
+        <ul class="header-list">
+          <li>Put on this page information about your product</li>
+          <li>A detailed description of your product</li>
+          <li>Tell us about the advantages and merits</li>
+          <li>Associate the page with the payment system</li>
+        </ul>
+      </div>
+      <div class="col-sm-5">
+        <div class="header-img back-white"></div>
+      </div>
+    </div>
+  </div>
+</header>
+```
+
+
+
