@@ -38,17 +38,29 @@
 Анализируя макет, создаем такую html стурктуру в **app/index.html**. 
 ```
 <div id="page-wrapper">
-  <header class="page-header"></header>
-  <section class="s-plusess"></section>
-  <section class="s-about"></section>
-  <section class="s-screenshots"></section>
-  <section class="s-reviews"></section>
-  <section class="s-prices"></section>
-  <section class="s-contacts"></section>
-  <footer class="page-footer"></footer>
+  <header  class="section section-header section-inverse"></header>
+  <section class="section section-plusess"></section>
+  <section class="section section-about"></section>
+  <section class="section section-screenshots"></section>
+  <section class="section section-reviews"></section>
+  <section class="section section-prices"></section>
+  <section class="section section-contacts section-inverse"></section>
+  <footer  class="page-footer"></footer>
 </div>
 ```
-Есть один блок page-wrapper в котором будет все секции макета и header, footer. Чтобы выделить классы секций с остальных классов, вставим **s-** перед классами секций. 
+Будет один блок **page-wrapper** в котором будет все секции макета и header, footer. Классы секций будет начинаться так **section section-**, чтобы выделить от остальных классов. **section-inverse** означает, что это секция будеть иметь синий фон с белым текстом, когда обычная секция имеет белый фон и черный текст по макету. Все основные css коды пишем в **app/sass/main.scss**. 
+```
+.section {
+	padding: 30px 0 50px 0;
+	background-color: #fff;
+	color: #333;
+
+	&-inverse {
+		background-color: #445162;
+		color: #fff;
+	}
+}
+```
 
 ### Header
 
