@@ -17,3 +17,16 @@
 
 ## Разработка
 
+Анализируя макет, создаем такую html стурктуру. Есть один блок page-wrapper в котором будет все секции макета и header, footer. Чтобы выделить классы секций с остальных классов, вставим **s-** перед классами секций. 
+```
+<div id="page-wrapper">
+  <header class="page-header"></header>
+  <section class="s-plusess"></section>
+  <section class="s-about"></section>
+  <section class="s-screenshots"></section>
+  <section class="s-reviews"></section>
+  <section class="s-prices"></section>
+  <section class="s-contacts"></section>
+  <footer class="page-footer"></footer>
+</div>
+```
