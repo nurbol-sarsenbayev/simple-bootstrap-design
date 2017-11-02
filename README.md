@@ -383,8 +383,8 @@ body {
 .section {
 	............
 	&-reviews {
-		padding-left: 5%;
-		padding-right: 5%;
+		padding-left: 3%;
+		padding-right: 3%;
 	}
 }
 
@@ -450,4 +450,143 @@ body {
 	}
 }
 ```
+
+### Секция Prices
+```html
+<section class="section section-prices">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="h2 text-center">Buy it now</h2>
+
+				<div class="prices">								
+					<div class="prices-item">
+						<h4 class="prices-title">Standart</h4>
+						<div class="prices-price">$100</div>
+						<div class="prices-content">
+							<ol class="prices-list">
+								<li>Porro officia cumque sint deleniti;</li>
+								<li>Тemo facere rem vitae odit;</li>
+								<li>Cum odio, iste quia doloribus autem;</li>
+								<li>Aperiam nulla ea neque;</li>								
+							</ol>
+							<button class="button prices-button">Buy</button>
+						</div>
+					</div>
+
+					<div class="prices-item">
+						<h4 class="prices-title">Premium</h4>
+						<div class="prices-price">$150</div>
+						<div class="prices-content">
+							<ol class="prices-list">
+								<li>Porro officia cumque sint deleniti;</li>
+								<li>Тemo facere rem vitae odit;</li>
+								<li>Cum odio, iste quia doloribus autem;</li>
+								<li>Aperiam nulla ea neque;</li>
+								<li>Porro officia cumque sint deleniti;</li>
+								<li>Тemo facere rem vitae odit;</li>
+								<li>Cum odio, iste quia doloribus autem;</li>
+								<li>Aperiam nulla ea neque;</li>								
+							</ol>
+							<button class="button prices-button">Buy</button>
+						</div>
+					</div>
+
+					<div class="prices-item">
+						<h4 class="prices-title">Lux</h4>
+						<div class="prices-price">$200</div>
+						<div class="prices-content">
+							<ol class="prices-list">
+								<li>Porro officia cumque sint deleniti;</li>
+								<li>Тemo facere rem vitae odit;</li>
+								<li>Cum odio, iste quia doloribus autem;</li>
+								<li>Aperiam nulla ea neque;</li>
+								<li>Porro officia cumque sint deleniti;</li>
+								<li>Тemo facere rem vitae odit;</li>
+								<li>Cum odio, iste quia doloribus autem;</li>
+								<li>Aperiam nulla ea neque;</li>
+								<li>Porro officia cumque sint deleniti;</li>
+								<li>Тemo facere rem vitae odit;</li>
+								<li>Cum odio, iste quia doloribus autem;</li>
+								<li>Aperiam nulla ea neque;</li>
+							</ol>
+							<button class="button prices-button">Buy</button>	
+						</div>
+					</div>
+				</div>	
+			</div>					
+		</div>
+	</div>
+</section>
+```
+
+```css
+.button {
+	background-color: #ffffff;
+	outline: none;
+	border: 0;
+	height: 40px;
+	color: #445162;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 40px;
+	padding: 0 50px;
+	border-radius: 5px;
+}
+
+.prices {
+	display: flex;
+	align-items: flex-end;
+	text-align: center;
+
+	&-item {
+		background-color: #445162;
+		border-radius: 5px;
+		flex-grow: 1;
+		
+		&:nth-child(2) {
+			margin: 0 20px;
+		}
+	}
+
+	&-title {
+		color: #ffffff;
+		font-size: 24px;
+		font-weight: normal;
+		line-height: 50px;
+		height: 50px;
+		margin: 0;
+	}
+
+	&-price {
+		color: #445162;
+		background-color: #ffffff;
+		height: 68px;
+		line-height: 68px;
+		font-size: 40px;
+		margin: 0 2px;
+	}
+
+	&-content {
+		padding: 20px;
+	}
+
+	&-list {
+		color: #fff;
+		font-size: 14px;
+		line-height: 24px;
+		text-align: left;
+		padding: 0;
+		margin: 0 0 20px;
+		list-style-position: inside;
+	}
+
+	&-button {
+		padding: 0;
+		width: 100%;
+	}
+}
+```
+
+
 
