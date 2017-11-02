@@ -331,7 +331,7 @@ body {
 ### Секция Reviews
 ```html
 <section class="section section-reviews section-gray">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12">
 				<h2 class="h2 text-center">Reviews</h2>
@@ -378,8 +378,16 @@ body {
 	</div>
 </section>
 ```
-
+Блок классом **container** заменем на **container-fluid**, так как это секция расположен на всю ширину экрана. А внутрений отступ (padding) этой секции по горизанталю будет иметь относительную значению (%, а не px). 
 ```css
+.section {
+	............
+	&-reviews {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
+
 .list {
 	............
 	&-reviews {
@@ -430,3 +438,16 @@ body {
 	}
 }
 ```
+Сделаем элемент списка _flex_ для того чтобы рисунок и контент находился в одной строке. После этого рисунку задаем css `flex-grow: 0; flex-shrink: 0;`, после которого при изменении экрана размер рисунка не будет меняться. border-radius блока **.list-reviews-content** дал примерную значению, из-за невозможности измерить в макете. А top позицию его псевдоэлемента before вычислил так: `75px/2 - 12px`, где 75px это высота рисунка, а 12px это рамка псевдоэлемента before. 
+Если размер экрана будет меньше чем 768px, тогда отступы этой секции будет больше чем у остальных секции, и будет занимать полезное место, в котором мог расположится контент. Чтобы избежать этого, в **app/sass/media.scss** пишем: 
+```css
+@media only screen and (max-width : 768px) {
+	.section {
+		&-reviews {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+```
+
