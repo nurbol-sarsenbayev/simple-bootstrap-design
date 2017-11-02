@@ -22,6 +22,48 @@ body {
 .text-center {
   text-align: center; }
 
+.button {
+  background-color: #ffffff;
+  outline: none;
+  border: 0;
+  height: 40px;
+  color: #445162;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 40px;
+  padding: 0 50px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  text-transform: uppercase; }
+
+.input, .textarea {
+  border: 0;
+  outline: 0;
+  background-color: #ffffff;
+  color: #445162;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  display: block;
+  width: 100%;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  font-size: 16px; }
+  .input::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
+    color: #445162;
+    font-family: Arial, sans-serif;
+    opacity: 1; }
+  .input::-moz-placeholder, .textarea::-moz-placeholder {
+    color: #445162;
+    opacity: 1; }
+  .input:-ms-input-placeholder, .textarea:-ms-input-placeholder {
+    color: #445162;
+    opacity: 1; }
+
+.textarea {
+  height: 170px;
+  line-height: 24px; }
+
 .section {
   padding: 50px 0;
   background-color: #fff;
@@ -34,6 +76,34 @@ body {
   .section-reviews {
     padding-left: 3%;
     padding-right: 3%; }
+  .section-contacts .input, .section-contacts .textarea {
+    margin-bottom: 20px; }
+  .section-contacts .button {
+    margin: 0 auto; }
+  .section-contacts p {
+    position: relative;
+    padding-left: 34px;
+    margin: 0 0 30px 0; }
+    .section-contacts p .fa {
+      font-size: 26px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
+  .section-contacts .contact-social-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    display: inline-block;
+    font-size: 26px;
+    line-height: 40px;
+    text-align: center;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    color: #445162;
+    margin-right: 3px; }
 
 .h1, .h2, .h3 {
   margin: 0;
@@ -46,6 +116,8 @@ body {
   color: #445161;
   font-size: 30px;
   line-height: 36px; }
+  .section-inverse .h2, .section-inverse .h3 {
+    color: #fff; }
 
 .h3 {
   margin-bottom: 15px;
@@ -184,19 +256,6 @@ body {
   .prices-button {
     padding: 0;
     width: 100%; }
-
-.button {
-  background-color: #ffffff;
-  outline: none;
-  border: 0;
-  height: 40px;
-  color: #445162;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 40px;
-  padding: 0 50px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
