@@ -18,7 +18,12 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-
+	.section {
+		&-reviews {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
 }
 	/**/
 

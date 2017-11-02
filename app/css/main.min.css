@@ -31,6 +31,9 @@ body {
     color: #fff; }
   .section-gray {
     background-color: #f5f5f5; }
+  .section-reviews {
+    padding-left: 3%;
+    padding-right: 3%; }
 
 .h1, .h2, .h3 {
   margin: 0;
@@ -134,12 +137,78 @@ body {
             flex-shrink: 0;
     margin-right: 25px; }
 
+.prices {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center; }
+  .prices-item {
+    background-color: #445162;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+    .prices-item:nth-child(2) {
+      margin: 0 20px; }
+  .prices-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 50px;
+    height: 50px;
+    margin: 0; }
+  .prices-price {
+    color: #445162;
+    background-color: #ffffff;
+    height: 68px;
+    line-height: 68px;
+    font-size: 40px;
+    margin: 0 2px; }
+  .prices-content {
+    padding: 20px; }
+  .prices-list {
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: left;
+    padding: 0;
+    margin: 0 0 20px;
+    list-style-position: inside; }
+  .prices-button {
+    padding: 0;
+    width: 100%; }
+
+.button {
+  background-color: #ffffff;
+  outline: none;
+  border: 0;
+  height: 40px;
+  color: #445162;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 40px;
+  padding: 0 50px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 /**/
 /* Medium Devices, Desktops */
 /**/
 /* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .section-reviews {
+    padding-left: 0;
+    padding-right: 0; } }
+
 /**/
 /* Extra Small Devices, Phones */
 /**/
