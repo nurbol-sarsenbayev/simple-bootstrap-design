@@ -169,7 +169,7 @@ body {
 	</div>
 </section>
 ```
-```scss
+```css
 .h2 {
 	@extend .h1;
 	color: #445161;
