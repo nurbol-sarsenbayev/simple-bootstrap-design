@@ -135,6 +135,7 @@ body {
 В макета высота линии заголовка задан auto, а это значить нам придется задать примерную высоту линию. Лучшии практики будет написать css свойствы на классы, а не на семантические теги. А иконка в макете сделан как рисунок, но в 2017 году иконок в основном делает через шрифт fontawesome. Так как иконка рисунок, мы дадим примерную размер шрифта иконка. Класс списка написан так **class="list list-header"**, чтобы css свйоства осталных секций написать в одном месте.  
 ```css
 .img {
+	width: 100%;
 	&-white {
 		background-color: #fff;
 	}
@@ -144,7 +145,6 @@ body {
 	}
 
 	&-header {
-		width: 100%;
 		height: 214px;
 	}
 }
@@ -175,6 +175,7 @@ body {
 ```css
 .h2 {
 	@extend .h1;
+	margin-bottom: 30px;
 	color: #445161;
 	font-size: 30px;
 	line-height: 36px;
@@ -183,7 +184,6 @@ body {
 .img {
 	............
 	&-about {
-		width: 100%;
 		height: 245px;
 	}
 }
@@ -192,7 +192,7 @@ body {
 
 ### Секция Plusses
 ```html
-<section class="section section-plusses">
+<section class="section section-plusses section-gray">
 	<div class="container">
 		<div class="row">
 			<div class="cols-sm-12">
@@ -222,7 +222,7 @@ body {
 
 .section {
 	............
-	&-plusses {
+	&-gray {
 		background-color: #f5f5f5;
 	}
 }
@@ -231,7 +231,7 @@ body {
 	............
 	&-plusses {
 		li {
-			margin: 30px 0;
+			margin-bottom: 30px;
 			padding-left: 42px; 
 			position: relative;
 			&::before {
@@ -247,4 +247,207 @@ body {
 	}
 }
 ```
-Здесь мы экспортировали иконку списка и назвали его **plus-icon.jpg**. 
+Здесь мы экспортировали иконку списка и назвали его **plus-icon.jpg**. При подключении иконки, мы позицинируюм top: 4px, так как из-за высоты линии текстка, иконка находилась выше. Так как некоторые секции имеет серый фон, добавили класс **section-gray**, для управления серым фоном секций. 
+
+### Секция Screenshots
+```html
+<section class="section section-screenshots">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="h2 text-center">Screenshots</h2>
+			</div>
+
+			<div class="col-sm-6">
+				<ul class="list list-screenshots">
+					<li>
+						<div class="img img-blue img-screenshots"></div>
+						<div class="list-screenshots-content">
+							<h3 class="h3">The description for the image</h3>
+							<p>Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis</p>
+						</div>
+					</li>
+					<li>
+						<div class="img img-blue img-screenshots"></div>
+						<div class="list-screenshots-content">
+							<h3 class="h3">The description for the image</h3>
+							<p>Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-sm-6">
+				<ul class="list list-screenshots">
+					<li>
+						<div class="img img-blue img-screenshots"></div>
+						<div class="list-screenshots-content">
+							<h3 class="h3">The description for the image</h3>
+							<p>Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis</p>
+						</div>
+					</li>
+					<li>
+						<div class="img img-blue img-screenshots"></div>
+						<div class="list-screenshots-content">
+							<h3 class="h3">The description for the image</h3>
+							<p>Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis</p>
+						</div>
+					</li>
+				</ul>
+			</div>					
+		</div>
+	</div>
+</section>
+```
+```css
+.h3 {
+	@extend .h2;
+	margin-bottom: 15px;
+	font-size: 22px;
+	line-height: 30px;
+}
+
+.list {
+	............
+	&-screenshots {
+		li {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.img {
+	............
+	&-screenshots {
+		width: 140px;
+		height: 140px;
+		float: left;
+		margin-right: 20px;
+	}
+}
+```
+Все размеры ширины, высоты и отступы измеряем в макете. 
+
+### Секция Reviews
+```html
+<section class="section section-reviews section-gray">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="h2 text-center">Reviews</h2>
+			</div>
+
+			<div class="col-sm-6">
+				<ul class="list list-reviews">
+					<li>
+						<div class="img img-blue img-reviews"></div>
+						<div class="list-reviews-content">
+							<p>Porro officia cumque sint deleniti nemo facere rem vitae odit inventore cum odio, iste quia doloribus autem aperiam nulla ea neque reprehenderit. Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
+							<p class="review-author">Lourens S.</p>
+						</div>
+					</li>
+					<li>
+						<div class="img img-blue img-reviews"></div>
+						<div class="list-reviews-content">
+							<p>Porro officia cumque sint deleniti nemo facere rem vitae odit inventore cum odio, iste quia doloribus autem aperiam nulla ea neque reprehenderit. Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
+							<p class="review-author">Lourens S.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-sm-6">
+				<ul class="list list-reviews">
+					<li>
+						<div class="img img-blue img-reviews"></div>
+						<div class="list-reviews-content">
+							<p>Porro officia cumque sint deleniti nemo facere rem vitae odit inventore cum odio, iste quia doloribus autem aperiam nulla ea neque reprehenderit. Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
+							<p class="review-author">Lourens S.</p>
+						</div>
+					</li>
+					<li>
+						<div class="img img-blue img-reviews"></div>
+						<div class="list-reviews-content">
+							<p>Porro officia cumque sint deleniti nemo facere rem vitae odit inventore cum odio, iste quia doloribus autem aperiam nulla ea neque reprehenderit. Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
+							<p class="review-author">Lourens S.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+```
+Блок классом **container** заменем на **container-fluid**, так как это секция расположен на всю ширину экрана. А внутрений отступ (padding) этой секции по горизанталю будет иметь относительную значению (%, а не px). 
+```css
+.section {
+	............
+	&-reviews {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
+
+.list {
+	............
+	&-reviews {
+		li {
+			display: flex;
+			margin-bottom: 25px;
+
+			p {
+				font-size: 14px;
+				line-height: 18px;
+				font-style: italic;
+				margin: 0;
+
+				&.review-author {
+					margin-top: 5px;
+					color: #989898;
+				}
+			}
+		}
+
+		&-content {
+			background-color: #ebebeb;
+			padding: 15px 20px;
+			border-radius: 5px;
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 25.5px;
+				left: -24px;
+				border: 12px solid transparent;
+				border-right-color: #ebebeb;
+			}
+		}
+	}
+}
+
+.img {
+	............
+	&-reviews {
+		width: 75px;
+		height: 75px;
+		border-radius: 50%;
+		flex-grow: 0;
+		flex-shrink: 0;
+		margin-right: 25px;
+	}
+}
+```
+Сделаем элемент списка _flex_ для того чтобы рисунок и контент находился в одной строке. После этого рисунку задаем css `flex-grow: 0; flex-shrink: 0;`, после которого при изменении экрана размер рисунка не будет меняться. border-radius блока **.list-reviews-content** дал примерную значению, из-за невозможности измерить в макете. А top позицию его псевдоэлемента before вычислил так: `75px/2 - 12px`, где 75px это высота рисунка, а 12px это рамка псевдоэлемента before. 
+Если размер экрана будет меньше чем 768px, тогда отступы этой секции будет больше чем у остальных секции, и будет занимать полезное место, в котором мог расположится контент. Чтобы избежать этого, в **app/sass/media.scss** пишем: 
+```css
+@media only screen and (max-width : 768px) {
+	.section {
+		&-reviews {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+```
+
