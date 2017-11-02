@@ -17,7 +17,7 @@
 
 ## Bootstrap
 Для сетки сайта используем адаптивную Bootstrap сетку 3 версии. Если не знакомы, рекомендуем прочитать систему сеток Bootstrap [здесь](http://bootstrap-3.ru/css.php#grid). Если кратко, сетка Bootstrap будет таким:
-```
+```html
 <div class="container">
   <div class="row">
     <div class="col-sm-7"></div>
@@ -36,7 +36,7 @@
 ## Разработка
 
 Анализируя макет, создаем такую html стурктуру в **app/index.html**. 
-```
+```html
 <div id="page-wrapper">
   <header  class="section section-header section-inverse"></header>
   <section class="section section-about"></section>
@@ -49,7 +49,7 @@
 </div>
 ```
 Будет один блок **page-wrapper** в котором будет все секции макета и header, footer. Классы секций будет начинаться так **section section-**, чтобы выделить от остальных классов. **section-inverse** означает, что это секция будеть иметь синий фон с белым текстом, когда обычная секция имеет белый фон и черный текст по макету. Все основные css коды пишем в **app/sass/main.scss**. 
-```
+```css
 .section {
   padding: 30px 0 50px 0;
   background-color: #fff;
@@ -62,9 +62,9 @@
 }
 ```
 В фотошопе в макете выбираем основные тексты и смотрям какие у них параметры в окне Character:
-![Текст в Фотошопе](!https://nurbol-sarsenbayev.github.io/images/simple-bootstrap-design/photoshop_character.JPG)
+![Текст в Фотошопе](https://nurbol-sarsenbayev.github.io/images/simple-bootstrap-design/photoshop_character.JPG)
 На рисунке видно, что шрифт (font-family) Arial, размер шрифта (font-size) 16px, высота линии (line-height) 24px. Чтобы эти свойствы были заданы на все элементы, а не только к тексту, их пишем в body:
-```
+```css
 body {
 	min-width: 320px;
 	position: relative;
