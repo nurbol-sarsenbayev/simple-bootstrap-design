@@ -51,7 +51,7 @@
 Будет один блок **page-wrapper** в котором будет все секции макета и header, footer. Классы секций будет начинаться так **section section-**, чтобы выделить от остальных классов. **section-inverse** означает, что это секция будеть иметь синий фон с белым текстом, когда обычная секция имеет белый фон и черный текст по макету. Все основные css коды пишем в **app/sass/main.scss**. 
 ```css
 .section {
-  padding: 30px 0 50px 0;
+  padding: 50px 0;
   background-color: #fff;
   color: #333;
 
@@ -87,7 +87,7 @@ body {
       
       <div class="col-sm-7">
         <h1 class="h1">Product name</h1>
-        <ul class="header-list">
+        <ul class="list list-header">
           <li>Put on this page information about your product</li>
           <li>A detailed description of your product</li>
           <li>Tell us about the advantages and merits</li>
@@ -112,25 +112,28 @@ body {
 	font-weight: normal;
 }
 
-.header-list {
-	margin: 20px 0 0 0;
+.list {
+	margin: 0;
 	padding: 0;
 	list-style: none;
-
-	li {
-		&:before {
-			font-family: "fontawesome";
-			content: "\f00c";
-			margin-right: 8px;
-			font-size: 26px;
+	
+	&-header {
+		margin-top: 20px;	
+		li {
+			&:before {
+				font-family: "fontawesome";
+				content: "\f00c";
+				margin-right: 8px;
+				font-size: 26px;
+			}
+			font-size: 20px;
+			line-height: 36px;
 		}
-		font-size: 20px;
-		line-height: 36px;
 	}
 }
 ```
-В макета высота линии заголовка задан auto, а это значить нам придется задать примерную высоту линию. Лучшии практики будет написать css свойствы на классы, а не на семантические теги. А иконка в макете сделан как рисунок, но в 2017 году иконок в основном делает через шрифт fontawesome. Так как иконка рисунок, мы дадим примерную размер шрифта иконка. 
-```scss
+В макета высота линии заголовка задан auto, а это значить нам придется задать примерную высоту линию. Лучшии практики будет написать css свойствы на классы, а не на семантические теги. А иконка в макете сделан как рисунок, но в 2017 году иконок в основном делает через шрифт fontawesome. Так как иконка рисунок, мы дадим примерную размер шрифта иконка. Класс списка написан так **class="list list-header"**, чтобы css свйоства осталных секций написать в одном месте.  
+```css
 .img {
 	&-white {
 		background-color: #fff;
@@ -150,7 +153,7 @@ body {
 
 ### Секция About
 ```html
-<section class="section s-about">
+<section class="section section-about">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-7">
@@ -185,5 +188,63 @@ body {
 	}
 }
 ```
+Заголовок .h2 наследует все css свойства кроме цвета, размер шрифта и высоты линии.
 
+### Секция Plusses
+```html
+<section class="section section-plusses">
+	<div class="container">
+		<div class="row">
+			<div class="cols-sm-12">
+				<h2 class="h2 text-center">Dignity and pluses product</h2>
+			</div>
+			<div class="col-sm-6">
+				<ul class="list list-plusses">
+					<li>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</li>
+					<li>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<ul class="list list-plusses">
+					<li>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</li>
+					<li>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+```
+Заголовку h2 добавляем класс **text-center**, который будет центрировать текст любого тега к которому будет добавлен. 
+```css
+.text-center {
+	text-align: center;
+}
 
+.section {
+	............
+	&-plusses {
+		background-color: #f5f5f5;
+	}
+}
+
+.list {
+	............
+	&-plusses {
+		li {
+			margin: 30px 0;
+			padding-left: 42px; 
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 4px;
+				left: 0;
+				width: 32px;
+				height: 32px;
+				background-image: url('../img/plus-icon.jpg');
+			}
+		}
+	}
+}
+```
+Здесь мы экспортировали иконку списка и назвали его **plus-icon.jpg**. 
