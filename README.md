@@ -151,23 +151,39 @@ body {
 ### Секция About
 ```html
 <section class="section s-about">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-7">
-					<h2 class="h2">About your product</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis facilis fuga, 
-						illo at. Natus eos, eligendi illum rerum omnis porro ex, magni, explicabo 
-						veniam incidunt in quam sapiente ut ipsum.</p>
-					<p>Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel 
-						exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi 
-						dolores. Sequi itaque, unde perferendis nemo debitis dolor.</p>
-				</div>
-				<div class="col-sm-5">
-					<div class="img-header img img-blue"></div>
-				</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-7">
+				<h2 class="h2">About your product</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis facilis fuga, 
+				illo at. Natus eos, eligendi illum rerum omnis porro ex, magni, explicabo 
+				veniam incidunt in quam sapiente ut ipsum.</p>
+				<p>Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel 
+				exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi 
+				dolores. Sequi itaque, unde perferendis nemo debitis dolor.</p>
+			</div>
+			<div class="col-sm-5">
+				<div class="img-about img img-blue"></div>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
+```
+```scss
+.h2 {
+	@extend .h1;
+	color: #445161;
+	font-size: 30px;
+	line-height: 36px;
+}
+
+.img {
+	............
+	&-about {
+		width: 100%;
+		height: 245px;
+	}
+}
 ```
 
 
