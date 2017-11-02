@@ -63,7 +63,7 @@
 ```
 В фотошопе в макете выбираем основные тексты и смотрям какие у них параметры в окне Character:
 ![Текст в Фотошопе](https://nurbol-sarsenbayev.github.io/images/simple-bootstrap-design/photoshop_character.JPG)
-На рисунке видно, что шрифт (font-family) Arial, размер шрифта (font-size) 16px, высота линии (line-height) 24px. Чтобы эти свойствы были заданы на все элементы, а не только к тексту, их пишем в body:
+На рисунке видно, что шрифт (font-family) Arial, размер шрифта (font-size) 16px, высота линии (line-height) 24px, цвет текста (color) черный. Чтобы эти свойствы были заданы на все элементы, а не только к тексту, их пишем в body:
 ```css
 body {
 	min-width: 320px;
@@ -71,7 +71,7 @@ body {
 	line-height: 24px;
 	font-size: 16px;
 	font-family: Arial, sans-serif;
-	color: #fff;
+	color: #333;
 	overflow-x: hidden;
 	opacity: 1;
 }
@@ -80,7 +80,7 @@ body {
 
 ### Header
 Шапка сайта будет выглядет так:
-```
+```html
 <header class="section section-header section-inverse">
   <div class="container">
     <div class="row">
@@ -103,9 +103,48 @@ body {
   </div>
 </header>
 ```
-А CSS:
-```
+А CSS шапка:
+```css
+.h1 {
+	margin: 0;
+	line-height: 1.5;
+	font-size: 60px;
+	font-weight: normal;
+}
 
-```
+.header-list {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
 
+	li {
+		&:before {
+			font-family: "fontawesome";
+			content: "\f00c";
+			margin-right: 8px;
+			font-size: 26px;
+		}
+		font-size: 20px;
+		line-height: 36px;
+	}
+}
+```
+В макета высота линии заголовка задан auto, а это значить нам придется задать примерную высоту линию. Лучшии практики будет написать css свойствы на классы, а не на семантические теги. А иконка в макете сделан как рисунок, но в 2017 году иконок в основном делает через шрифт fontawesome. Так как иконка рисунок, мы дадим примерную размер шрифта иконка. 
+```css
+.img {
+	&-white {
+		background-color: #fff;
+	}
+
+	&-blue {
+		background-color: #445161;
+	}
+
+	&-header {
+		width: 100%;
+		height: 214px;
+	}
+}
+```
+Все css-ы рисунков пишем в одном место. В макете нет рисунков, а есть место рисунка. Но мы их будем назвать рисунками для удобства. _img-white_ рисунок с белым фоном, а _img-blue_ с синим фоном. _img-header_ это рисунок секции header. Рисунки остальных секций тоже будет здесь расположены. 
 
