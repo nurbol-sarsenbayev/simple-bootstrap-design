@@ -45,7 +45,7 @@
 	<section class="section section-reviews section-gray"></section>
 	<section class="section section-prices"></section>
 	<section class="section section-contacts section-inverse"></section>
-	<footer  class="section-gray page-footer"></footer>
+	<footer  class="section-gray section-footer"></footer>
 </div>
 ```
 Будет один блок **page-wrapper** в котором будет все секции макета и header, footer. Классы секций будет начинаться так **section section-**, чтобы выделить от остальных классов. **section-inverse** означает, что это секция будеть иметь синий фон с белым текстом, когда обычная секция имеет белый фон и черный текст по макету. Есть еще некоторые секции серым фоном, где указаны классом **section-gray**.  Все основные css коды пишем в **app/sass/main.scss**. 
@@ -764,7 +764,7 @@ CSS в **app/sass/_media.scss*:
 
 ### Секция Footer
 ```html
-<footer class="section-gray page-footer">
+<footer class="section-gray section-footer">
 	<div class="container">
 		<p class="text-center">Copyright © 2014 Product name · PSD HTML CSS</p>
 	</div>
@@ -772,13 +772,16 @@ CSS в **app/sass/_media.scss*:
 ```
 
 ```scss
-.page-footer {
-	color: $accent;
-	font-size: 12px;
-	line-height: 24px;
+.section {
+	............
+	&-footer {
+		color: $accent;
+		font-size: 12px;
+		line-height: 24px;
 
-	p {
-		margin: 2px 0;
+		p {
+			margin: 2px 0;
+		}
 	}
 }
 ```
