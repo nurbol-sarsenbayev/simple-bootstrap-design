@@ -10,10 +10,10 @@ html, body {
 body {
 	min-width: 320px;
 	position: relative;
-	line-height: 24px;
-	font-size: 16px;
-	font-family: Arial, sans-serif;
-	color: #333;
+	line-height: $default_line_height;
+	font-size: $default_font_size;
+	font-family: $default-font;
+	color: $default_text_color;
 	overflow-x: hidden;
 	opacity: 1;
 }
@@ -77,7 +77,6 @@ body {
 .section {
 	padding: 50px 0;
 	background-color: #fff;
-	color: #333;
 
 	&-inverse {
 		background-color: $accent;
@@ -126,6 +125,16 @@ body {
 			border-radius: 50%;
 			color: $accent;
 			margin-right: 3px;
+		}
+	}
+
+	&-footer {
+		color: $accent;
+		font-size: 12px;
+		line-height: 24px;
+	
+		p {
+			margin: 2px 0;
 		}
 	}
 }
@@ -320,16 +329,6 @@ body {
 	&-button {
 		padding: 0;
 		width: 100%;
-	}
-}
-
-.page-footer {
-	color: $accent;
-	font-size: 12px;
-	line-height: 24px;
-
-	p {
-		margin: 2px 0;
 	}
 }
 
