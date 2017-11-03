@@ -113,7 +113,7 @@ body {
 
 .h2, .h3 {
   margin-bottom: 30px;
-  color: #445161;
+  color: #445162;
   font-size: 30px;
   line-height: 36px; }
   .section-inverse .h2, .section-inverse .h3 {
@@ -185,7 +185,7 @@ body {
   .img-white {
     background-color: #fff; }
   .img-blue {
-    background-color: #445161; }
+    background-color: #445162; }
   .img-header {
     height: 214px; }
   .img-about {
@@ -256,6 +256,13 @@ body {
   .prices-button {
     padding: 0;
     width: 100%; }
+
+.page-footer {
+  color: #445162;
+  font-size: 12px;
+  line-height: 24px; }
+  .page-footer p {
+    margin: 2px 0; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */

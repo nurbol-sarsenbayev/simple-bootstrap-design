@@ -27,7 +27,7 @@ body {
 	outline: none;
 	border: 0;
 	height: 40px;
-	color: #445162;
+	color: $accent;
 	font-weight: bold;
 	font-size: 18px;
 	line-height: 40px;
@@ -40,7 +40,7 @@ body {
 	border: 0;
 	outline: 0;
 	background-color: #ffffff;
-	color: #445162;
+	color: $accent;
 	height: 40px;
 	line-height: 40px;
 	padding: 0 20px;
@@ -50,18 +50,18 @@ body {
 	font-size: 16px;
 
 	&::-webkit-input-placeholder {
-		color: #445162;
+		color: $accent;
 		font-family: Arial, sans-serif;
 		opacity: 1;
 	}
 		
 	&::-moz-placeholder {
-		color: #445162;
+		color: $accent;
 		opacity: 1;
 	}
 	
 	&:-ms-input-placeholder {
-		color: #445162;
+		color: $accent;
 		opacity: 1;
 	}		
 }
@@ -78,7 +78,7 @@ body {
 	color: #333;
 
 	&-inverse {
-		background-color: #445162;
+		background-color: $accent;
 		color: #fff;
 	}
 
@@ -122,7 +122,7 @@ body {
 			line-height: 40px;
 			text-align: center;
 			border-radius: 50%;
-			color: #445162;
+			color: $accent;
 			margin-right: 3px;
 		}
 	}
@@ -139,7 +139,7 @@ body {
 .h2 {
 	@extend .h1;
 	margin-bottom: 30px;
-	color: #445161;
+	color: $accent;
 	font-size: 30px;
 	line-height: 36px;
 	.section-inverse & {
@@ -240,7 +240,7 @@ body {
 	}
 
 	&-blue {
-		background-color: #445161;
+		background-color: $accent;
 	}
 
 	&-header {
@@ -274,7 +274,7 @@ body {
 	text-align: center;
 
 	&-item {
-		background-color: #445162;
+		background-color: $accent;
 		border-radius: 5px;
 		flex-grow: 1;
 		
@@ -293,7 +293,7 @@ body {
 	}
 
 	&-price {
-		color: #445162;
+		color: $accent;
 		background-color: #ffffff;
 		height: 68px;
 		line-height: 68px;
@@ -318,6 +318,16 @@ body {
 	&-button {
 		padding: 0;
 		width: 100%;
+	}
+}
+
+.page-footer {
+	color: $accent;
+	font-size: 12px;
+	line-height: 24px;
+
+	p {
+		margin: 2px 0;
 	}
 }
 
